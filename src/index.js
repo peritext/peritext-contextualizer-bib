@@ -1,9 +1,7 @@
-export {default as metadata} from './metadata';
-export {default as InlineDynamic} from './InlineDynamic';
-export {default as InlineStatic} from './InlineStatic';
-import {default as Block} from './BlockDynamic';
+import BlockComponent from './Block';
+import InlineComponent from './Inline';
+import metadata from './meta';
 
-export const BlockDynamic = Block;
-export const BlockStatic = Block;
-
-export const defaultCss = '';
+export const Block = BlockComponent;
+export const Inline = InlineComponent;
+export const meta = metadata;
