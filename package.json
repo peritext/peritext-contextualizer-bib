@@ -1,6 +1,6 @@
 {
   "name": "peritext-contextualizer-bib",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Peritext default bibliographic contextualizer",
   "main": "dist/index.js",
   "scripts": {
@@ -18,12 +18,12 @@
   },
   "homepage": "https://github.com/peritext/peritext-contextualizer-bib#readme",
   "dependencies": {
-    "peritext-utils": "^0.1.0",
     "react-citeproc": "^0.1.10"
   },
   "peerDependencies": {
     "react": "^16.7.0-alpha",
-    "react-dom": "^16.7.0-alpha"
+    "react-dom": "^16.7.0-alpha",
+    "peritext-utils": "^0.2.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
