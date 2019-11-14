@@ -13,7 +13,7 @@ export default {
         prefix: {
           type: 'string'
         },
-        localization: {
+        locator: {
           type: 'string'
         },
         suffix: {

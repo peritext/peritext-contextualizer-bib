@@ -1,6 +1,6 @@
 {
   "name": "peritext-contextualizer-bib",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Peritext default bibliographic contextualizer",
   "main": "dist/index.js",
   "scripts": {

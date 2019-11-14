@@ -18,7 +18,7 @@ var _default = {
         prefix: {
           type: 'string'
         },
-        localization: {
+        locator: {
           type: 'string'
         },
         suffix: {
