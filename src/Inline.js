@@ -13,7 +13,7 @@ const Inline = ( {
   renderingMode,
   children,
 }, {
-  citations
+  citations = {}
 } ) => {
   const citation = citations[contextualization.id];
   if ( citation && citation.html ) {

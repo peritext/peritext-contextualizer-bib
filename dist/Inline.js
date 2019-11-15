@@ -21,7 +21,7 @@ const Inline = ({
   renderingMode,
   children
 }, {
-  citations
+  citations = {}
 }) => {
   const citation = citations[contextualization.id];
 
