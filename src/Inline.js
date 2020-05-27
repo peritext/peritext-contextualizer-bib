@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Inline = ( {
-
+  resource,
   /*
    * resource,
    * contextualizer,
@@ -16,11 +16,16 @@ const Inline = ( {
   citations = {}
 } ) => {
   const citation = citations[contextualization.id];
+  const handleClick = e => {
+    e.stopPropagation();
+  }
   if ( citation && citation.html ) {
     return (
-      <span
+      <a
         id={ contextualization.id }
         className={ `peritext-contextualization inline bib rendering-mode-${renderingMode}` }
+        href={`#${resource.id}`}
+        onClick={handleClick}
       >
         {children /*&& children.length ?
           <q>
@@ -32,7 +37,7 @@ const Inline = ( {
         <cite
           dangerouslySetInnerHTML={ { __html: citation.html } }
         />
-      </span>
+      </a>
     );
   }
   return null;

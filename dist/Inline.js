@@ -13,6 +13,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* eslint react/no-danger : 0 */
 const Inline = ({
+  resource,
+
   /*
    * resource,
    * contextualizer,
@@ -25,10 +27,16 @@ const Inline = ({
 }) => {
   const citation = citations[contextualization.id];
 
+  const handleClick = e => {
+    e.stopPropagation();
+  };
+
   if (citation && citation.html) {
-    return _react.default.createElement("span", {
+    return _react.default.createElement("a", {
       id: contextualization.id,
-      className: `peritext-contextualization inline bib rendering-mode-${renderingMode}`
+      className: `peritext-contextualization inline bib rendering-mode-${renderingMode}`,
+      href: `#${resource.id}`,
+      onClick: handleClick
     }, children
     /*&& children.length ?
     <q>
