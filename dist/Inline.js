@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _peritextUtils = require("peritext-utils");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* eslint react/no-danger : 0 */
@@ -27,16 +29,14 @@ const Inline = ({
 }) => {
   const citation = citations[contextualization.id];
 
-  const handleClick = e => {
-    e.stopPropagation();
-  };
-
   if (citation && citation.html) {
+    const [{
+      id
+    }] = (0, _peritextUtils.resourceToCslJSON)(resource);
     return _react.default.createElement("a", {
       id: contextualization.id,
       className: `peritext-contextualization inline bib rendering-mode-${renderingMode}`,
-      href: `#${resource.id}`,
-      onClick: handleClick
+      href: `#${id}`
     }, children
     /*&& children.length ?
     <q>
